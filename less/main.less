@@ -1,0 +1,379 @@
+@import "fonts.less";
+@import "reset.less";
+@import "variables.less";
+@import "mobil.less";
+
+body {
+	font-family: "Helvetica", sans-serif;
+	font-size: 14px;
+	color: @main-color;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 1.05px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 1230px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+}
+section {
+	box-sizing: border-box;
+}
+.mobile {
+	display: none;
+}
+
+#main-section {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	.background {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		animation-name: animateBackground;
+		animation-duration: 6s;
+		background-image: url(../img/fon.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 5;
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.77);
+			z-index: 3;
+		}
+	}
+	video {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 4;
+	}
+	@keyframes animateBackground {
+		0% {
+			opacity: 0;
+		}
+		60% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes animateSpan {
+		0% {
+			opacity: 0;
+			transform: rotateY(90deg);
+			filter: blur(10px);
+		}
+		100% {
+			opacity: 1;
+			transform: rotateY(0deg);
+			filter: blur(0);
+		}
+	}
+	@keyframes animateDesc {
+		0% {
+			opacity: 0;
+			transform: translate(50%, 0%);
+			filter: blur(10px);
+		}
+		100% {
+			opacity: 1;
+			transform: translate(50%, 50%);
+			filter: blur(0);
+		}
+	}
+	h1 {
+		text-align: center;
+		width: 100%;
+		position: absolute;
+		z-index: 6;
+		top: 50%;
+		right: 50%;
+		transform: translate(50%, -50%);
+		color: #ffffff;
+		font-size: 30px;
+		font-weight: 700;
+		letter-spacing: 42px;
+		span {
+			opacity: 0;
+			display: inline-block;
+			animation: animateSpan 1s linear forwards;
+			&:nth-child(1) {
+				animation-delay: 0s;
+			}
+			&:nth-child(2) {
+				animation-delay: .25s;
+			}
+			&:nth-child(3) {
+				animation-delay: .5s;
+			}
+			&:nth-child(4) {
+				animation-delay: .75s;
+			}
+			&:nth-child(5) {
+				animation-delay: 1s;
+			}
+			&:nth-child(6) {
+				animation-delay: 1.25s;
+			}
+			&:nth-child(7) {
+				animation-delay: 1.5s;
+			}
+			&:nth-child(8) {
+				animation-delay: 1.75s;
+			}
+			&:nth-child(9) {
+				animation-delay: 2.1s;
+			}
+			&:nth-child(10) {
+				animation-delay: 2.35s;
+			}
+			&:nth-child(11) {
+				animation-delay: 2.6s;
+			}
+			&:nth-child(12) {
+				animation-delay: 2.85s;
+			}
+			&:nth-child(13) {
+				animation-delay: 3.1s;
+			}
+			&:nth-child(14) {
+				animation-delay: 3.3s;
+			}
+			&:nth-child(15) {
+				animation-delay: 3.4s;
+			}
+			&:nth-child(16) {
+				animation-delay: 3.6s;
+			}
+			&:nth-child(17) {
+				animation-delay: 3.8s;
+			}
+		}
+	}
+	.main-desc {
+		opacity: 0;
+		animation: animateDesc 1s linear forwards;
+		animation-delay: 4.4s;
+		text-align: center;
+		width: 100%;
+		position: absolute;
+		z-index: 6;
+		top: 50%;
+		right: 50%;
+		margin-top: 70px;
+		color: #ffffff;
+		font-size: 19px;
+		font-weight: 400;
+		letter-spacing: 7px;
+	}
+}
+#rools-section {
+	padding-top: 60px;
+	position: relative;
+	&:before {
+		content: url(../img/gun1.png);
+		position: absolute;
+		left: -212px;
+		top: 105px;
+	}
+	&:after {
+		content: url(../img/gun2.png);
+		position: absolute;
+		right: -114px;
+		top: 305px;
+		z-index: -1;
+	}
+	h2 {
+		text-align: center;
+		width: 100%;
+		color: #111111;
+		font-size: 32px;
+		font-weight: 700;
+		letter-spacing: 1.6px;
+	}
+	.rools-wrap {
+		width: 1000px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.rools-item {
+		z-index: 0;
+		margin-top: 50px;
+		width: 250px;
+		position: relative;
+		padding-left: 80px;
+		.number {
+			position: absolute;
+			left: 0;
+			top: 14px;
+			color: #a3a3a3;
+			font-size: 54px;
+			font-weight: 700;
+			letter-spacing: 2.7px;
+		}
+		h3 {
+			color: #777777;
+			font-size: 17px;
+			font-weight: 700;
+			letter-spacing: 0.85px;
+		}
+		p {
+			margin-top: 6px;
+			color: #777777;
+			font-size: 15px;
+			font-weight: 400;
+			letter-spacing: 0.75px;
+		}
+		&:before {
+			opacity: 0;
+			content: url(../img/hole.png);
+			animation: animateHole linear forwards;
+			animation-duration: .01s;
+			position: absolute;
+			left: 100px;
+			top: 0;
+			z-index: -1;
+		}
+		@keyframes animateHole {
+			0% {
+				opacity: 0;
+			}
+			90% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+		&:nth-child(1) {
+			&:before {
+				animation-delay: 10.31s;
+				left: 20px;
+				top: 40px;
+			}
+		}
+		&:nth-child(2) {
+			&:before {
+				animation-delay: 10.13s;
+			    left: 67px;
+			    top: 7px;
+			}
+		}
+		&:nth-child(3) {
+			&:before {
+				animation-delay: 10.2s;
+				left: 150px;
+				top: 41px;
+			}
+		}
+		&:nth-child(4) {
+			&:before {
+				animation-delay: 10.1s;
+				left: 223px;
+				top: 25px;
+			}
+		}
+		&:nth-child(5) {
+			&:before {
+				animation-delay: 10.23s;
+				left: 219px;
+				top: -36px;
+			}
+		}
+		&:nth-child(6) {
+			&:before {
+				animation-delay: 10.27s;
+				left: 119px;
+				top: -3px;
+			}
+		}
+	}
+}
+#form-section {
+	padding-bottom: 40px;
+	padding-top: 80px;
+	.main-form {
+		display: flex;
+		flex-direction: column;
+	}
+	fieldset {
+		margin-top: 28px;
+		width: 560px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		border: none;
+		label {
+			width: 100%;
+			color: #a3a3a3;
+			font-size: 15px;
+			font-weight: 400;
+			letter-spacing: 0.7px;
+		}
+		input {
+			margin-top: 8px;
+			padding: 0 25px;
+			background: transparent;
+			width: 390px;
+			height: 38px;
+			border-radius: 19px;
+			border: 1px solid #a3a3a3;
+			color: #777777;
+			font-size: 14px;
+			font-weight: 400;
+			letter-spacing: 0.7px;
+		}
+		input[type="number"] {
+			padding: 0 10px;
+			box-sizing: border-box;
+			width: 76px;
+			text-align: center;
+		}
+	}
+	h2 {
+		color: #111111;
+		font-size: 32px;
+		font-weight: 700;
+		letter-spacing: 1.6px;
+	}
+	.form-btn {
+		margin-top: 28px;
+		cursor: pointer;
+		width: 170px;
+		height: 38px;
+		border-radius: 19px;
+		border: 1px solid #a3a3a3;
+		background: transparent;
+		text-align: center;
+		color: #777777;
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 0.7px;
+	}
+}
