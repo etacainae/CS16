@@ -105,6 +105,7 @@ section {
 		}
 	}
 	h1 {
+		padding: 0 15px;
 		text-align: center;
 		width: 100%;
 		position: absolute;
@@ -115,7 +116,7 @@ section {
 		color: #ffffff;
 		font-size: 30px;
 		font-weight: 700;
-		letter-spacing: 42px;
+		letter-spacing: 3.3vw;
 		span {
 			opacity: 0;
 			display: inline-block;
@@ -375,5 +376,22 @@ section {
 		font-size: 14px;
 		font-weight: 400;
 		letter-spacing: 0.7px;
+	}
+}
+@media (max-width: 1199.9px) {
+	#main-section h1 {
+	    font-size: 26px;
+	}
+	#main-section .main-desc {
+		font-size: 16px;
+	}
+}
+@media (max-width:768px) {
+	#main-section h1 {
+	    font-size: 20px;
+	    letter-spacing: 2.8vw;
+	}
+	#main-section .main-desc {
+		font-size: 13px;
 	}
 }
